@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+float cobranca(float horas, float valor){
+    return horas * valor;
+
+
+}
+
+int main(){
+    float horas,valor;
+    char convenio [10];
+    float cliente;
+
+    valor = 10.0;
+
+    printf("Valor do estacionamento R$: 10,00 a hora.\n");
+    printf("\nInforme a quantidade de tempo no estacionamento: ");
+    scanf("%f", &horas);
+    printf("\nInforme se ha convenio com o estacionamento Sim/Nao ?: ");
+    scanf("%s", &convenio);
+
+    if (strcmp(convenio,"sim") == 0){
+        cliente = cobranca(horas,valor) * 0.90;
+        printf("\nTempo de permanecia de %.1f com desconto no total de R$: %.2f", horas, cliente);
+
+
+    }
+    else{
+        cliente = cobranca(horas, valor);
+        printf("Valor a ser pago R$: %.2f", cliente);
+    }
+
+    return 0;
+
+
+}
