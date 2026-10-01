@@ -16,14 +16,14 @@ int main(){
     valor = 10.0;
 
     printf("Valor do estacionamento R$: 10,00 a hora.\n");
-    printf("\nInforme a quantidade de tempo no estacionamento: ");
+    printf("\nInforme a permanencia no estacionamento: ");
     scanf("%f", &horas);
-    printf("\nInforme se ha convenio com o estacionamento Sim/Nao ?: ");
+    printf("\nPossui convenio com o estacionamento Sim/Nao ?: ");
     scanf("%s", &convenio);
 
     if (strcmp(convenio,"sim") == 0){
         cliente = cobranca(horas,valor) * 0.90;
-        printf("\nTempo de permanecia de %.1f com desconto no total de R$: %.2f", horas, cliente);
+        printf("\nTempo de permanencia de %.1f com desconto no total de R$: %.2f", horas, cliente);
 
 
     }
